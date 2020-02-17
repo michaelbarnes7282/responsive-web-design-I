@@ -184,7 +184,12 @@ footer{
     .words h1{
         margin:0;
     }
-
+    .section2 div{
+        padding-bottom:10vh;
+    }
+    .button{
+        margin-right:55%;
+    }
 }
 
 /*Rules for when the screen size is 500px or lower*/
@@ -211,5 +216,11 @@ footer{
     }
     .top-content,.bottom-content{
         flex-wrap:wrap;
+    }
+    .section2{
+        flex-direction:column;
+    }
+    .section2 div{
+        width:100%;
     }
 }
