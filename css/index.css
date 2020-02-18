@@ -1,3 +1,226 @@
+
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	width:911px;
+	margin:auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	/* border: 1px solid black; */
+	padding: 0px;
+	max-width: 100%;
+}
 
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+hr{
+	height:1px;
+	margin: 5% 0;
+}
+nav,header,section,footer{
+	margin: 2% 0;
+}
+
+nav{
+	display:flex;
+	justify-content: space-between;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.links{
+	display:flex;
+	width:70%;
+	justify-content: space-between ;
+	align-items: center;
+}
+header, .top-content, .bottom-content{
+	display:flex;
+}
+.logo{
+	display:flex;
+	align-items:center;
+}
+.words{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width:50%;
+	text-align:center;
+}
+.words h1{
+	font-size: 5vh;
+}
+.words p{
+    border: 1px solid black;
+    margin: 2vh 13vh;
+}
+.img-container{
+	display:flex;
+	width: 50%;
+	justify-content:center;
+}
+.img-container2{
+	display:flex;
+	justify-content:center;
+}
+.services{
+	margin:0 25px;
+}
+.section2{
+	display:flex;
+	flex-wrap:wrap;
+}
+.section2 div{
+	margin: 10px;
+	padding: 2vh;
+	border: 1px solid black;
+	background-color: oldlace;
+	width: 47%;
+	height: 24vh;
+}
+.button{
+	margin-right:26vh;
+	height:3vh;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color:white;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+#hr2{
+	height:4px;
+	color:black;
+	background-color: black;
+}
+.facts{
+	width:50%;	
+}
+li{
+	margin: 8px 0;
+}
+footer{
+	margin-top:11vh;
+	text-align:center;
+}
+
+/*Rules for when the screen size is 800px to 500px*/
+@media (max-width: 800px){
+    body{
+        padding: 0 5%;
+    }
+    .img-container{
+        display:none;
+    }
+    header{
+        justify-content:center;
+    }
+    nav{
+        flex-direction: column-reverse;
+        flex-wrap:wrap;
+    }
+    .logo{
+        justify-content:center;
+        margin-top:1vh;
+    }
+    .links{
+        width:100%;
+        justify-content: space-between;
+        margin-top:5vh;
+    }
+    header{
+        margin-top:5vh;
+    }
+    .words h1{
+        margin:0;
+    }
+    .section2 div{
+        padding-bottom:10vh;
+    }
+    .button{
+        margin-right:55%;
+    }
+}
+
+/*Rules for when the screen size is 500px or lower*/
+@media (max-width:500px){
+    div.logo, nav a{
+        max-width:500px;
+        border-bottom: 1px solid black;
+        width:100%;
+    }
+    .links{
+        margin-top:0;
+        flex-direction:column;
+    }
+    .logo{
+        padding-bottom:1vh;
+    }
+    nav a{
+        padding: 2vh 0;
+        display:flex;
+        justify-content:center;
+    }
+    .words p{
+        margin:1vh 5vh;
+    }
+    .top-content,.bottom-content{
+        flex-wrap:wrap;
+    }
+    .section2{
+        flex-direction:column;
+    }
+    .section2 div{
+        width:100%;
+    }
+}
